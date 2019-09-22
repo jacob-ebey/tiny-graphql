@@ -34,7 +34,7 @@ Optionaly install the cache as well
 
 ## Usage
 
-```typescript
+```javascript
 import { createClient } from '@tiny-graphql/core';
 import { createCache } from '@tiny-graphql/cache'; // Optional
 
@@ -43,8 +43,8 @@ const client = createClient({
   url: '<YOUR_URL>'
 });
 
-async function sayHello(name: string): string {
-  const result = await client.execute<{ hello?: string }>({
+async function sayHello(name) {
+  const result = await client.execute({
     query: `
       query SayHello($name: String) {
         hello(name: $name)
