@@ -1,6 +1,6 @@
 # Tiny GraphQL
 
-A tiny GraphQL suite for making your dev and user experience better than ever.
+A tiny GraphQL client for making your dev and user experience better than ever.
 
 ## Truly tiny
 

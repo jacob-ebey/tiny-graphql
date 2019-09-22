@@ -1,3 +1,3 @@
 # tiny-graphql
 
-A tiny GraphQL suite for making your dev experience better than ever.
+A tiny GraphQL client for making your dev experience better than ever.
