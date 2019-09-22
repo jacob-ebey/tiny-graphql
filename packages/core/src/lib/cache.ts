@@ -4,6 +4,7 @@ export interface CacheKey {
 }
 
 export interface Cache {
+  readonly clear: () => Promise<void>;
   readonly read: <T>(key: CacheKey, throwsIfNotExist?: boolean) => Promise<T>;
   readonly write: (key: CacheKey, value: any) => Promise<void>;
 }

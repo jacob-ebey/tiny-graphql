@@ -10,6 +10,10 @@ export function createCache(): Cache {
   const values = new Map<string, any>();
 
   return {
+    clear: () => {
+      values.clear();
+      return Promise.resolve();
+    },
     read: async <T>(key: CacheKey, throwsIfNotExist?: boolean): Promise<T> => {
       const hashed = hash(key);
 

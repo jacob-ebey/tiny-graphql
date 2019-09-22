@@ -9,6 +9,11 @@ export function createCache(options?: CreateCacheOptions): Cache {
   const values = new Map<string, any>((options && options.values) || []);
 
   return {
+    clear: () => {
+      // tslint:disable-next-line: no-expression-statement
+      values.clear();
+      return Promise.resolve();
+    },
     read: async <T>(key: CacheKey, throwsIfNotExist?: boolean): Promise<T> => {
       const hashed = hash(key);
 

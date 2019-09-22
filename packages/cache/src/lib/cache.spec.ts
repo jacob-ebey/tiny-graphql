@@ -77,3 +77,19 @@ test('cache - can pass initial values', async t => {
   const value = await cache.read({ query: '{ hello }' });
   t.is(value, res);
 });
+
+test('cache - can clear', async t => {
+  const res = { hello: 'world' };
+
+  const cache = createCache({
+    values: [[hash({ query: '{ hello }' }), res]]
+  });
+
+  const value = await cache.read({ query: '{ hello }' });
+  t.is(value, res);
+
+  cache.clear();
+
+  const value2 = await cache.read({ query: '{ hello }' });
+  t.is(value2, undefined);
+});
