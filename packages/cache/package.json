@@ -1,6 +1,6 @@
 {
   "name": "@tiny-graphql/cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny GraphQL suite for making your dev experience better than ever.",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
