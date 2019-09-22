@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "tiny-graphql",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn build:core && yarn build:cache",
+    "build:core": "yarn workspace @tiny-graphql/core build",
+    "build:cache": "yarn workspace @tiny-graphql/cache build",
+    "test": "yarn test:core && yarn test:cache",
+    "test:core": "yarn workspace @tiny-graphql/core test",
+    "test:cache": "yarn workspace @tiny-graphql/cache test",
+    "cov": "yarn cov:core && yarn cov:cache",
+    "cov:core": "yarn workspace @tiny-graphql/core cov",
+    "cov:cache": "yarn workspace @tiny-graphql/cache cov"
+  }
+}
