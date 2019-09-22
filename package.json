@@ -13,6 +13,9 @@
     "test:cache": "yarn workspace @tiny-graphql/cache test",
     "cov": "yarn cov:core && yarn cov:cache",
     "cov:core": "yarn workspace @tiny-graphql/core cov",
-    "cov:cache": "yarn workspace @tiny-graphql/cache cov"
+    "cov:cache": "yarn workspace @tiny-graphql/cache cov",
+    "prepare-release": "yarn prepare-release:core && yarn prepare-release:cache",
+    "prepare-release:core": "yarn workspace @tiny-graphql/core prepare-release",
+    "prepare-release:cache": "yarn workspace @tiny-graphql/cache prepare-release"
   }
 }
